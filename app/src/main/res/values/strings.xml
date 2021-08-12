@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">IOScameraAndroidApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="msg_save_image_to_share">Please save image to share</string>
+    <string name="msg_share_image">Share Image</string>
+
+    <string name="camera_fragment">Camera</string>
+    <string name="video_fragment">Video</string>
+    <string name="square_fragment">Square</string>
+</resources>

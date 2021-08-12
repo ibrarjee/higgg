@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_save_files_graph"
+    app:startDestination="@id/viewSavedFilesFragments2">
+
+    <fragment
+        android:id="@+id/viewSavedFilesFragments2"
+        android:name="com.ui.main.view.fragments.ViewSavedFilesFragments"
+        android:label="ViewSavedFilesFragments" >
+        <action
+            android:id="@+id/action_viewSavedFilesFragments2_self"
+            app:destination="@id/viewSavedFilesFragments2"
+            app:popUpToInclusive="true"/>
+    </fragment>
+</navigation>

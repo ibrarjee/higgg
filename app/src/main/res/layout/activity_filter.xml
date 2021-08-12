@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+        <data>
+
+        </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ui.main.view.FilterActivity">
+            <com.utils.PhotoEditorView
+                android:id="@+id/imageViewForFilter"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:rotation="0"
+                android:backgroundTint="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgGallery"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:background="@color/semi_black_transparent"
+                android:padding="8dp"
+                android:visibility="gone"
+                android:src="@drawable/ic_gallery"
+                app:layout_constraintBottom_toTopOf="@+id/rvFilterView"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgCamera"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:background="@color/semi_black_transparent"
+                android:padding="8dp"
+                android:visibility="gone"
+                android:src="@drawable/ic_camera"
+                app:layout_constraintBottom_toTopOf="@+id/rvFilterView"
+                app:layout_constraintStart_toEndOf="@id/imgGallery" />
+
+    <com.skydoves.elasticviews.ElasticImageView
+        android:id="@+id/imgSave"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:scaleType="fitXY"
+        app:tint="#8E8E8E"
+        android:padding="5dp"
+        app:imageView_scale="0.7"
+        app:imageView_duration="300"
+        android:src="@drawable/floppy_disk"
+        app:layout_constraintBottom_toBottomOf="@+id/rvFilterView"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewForFilter"
+        app:layout_constraintHorizontal_bias="0.96"
+        app:layout_constraintStart_toStartOf="@+id/imageViewForFilter"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.01999998" />
+
+    <com.skydoves.elasticviews.ElasticImageView
+        android:id="@+id/imgClose"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:scaleType="fitXY"
+        app:imageView_scale="0.7"
+        app:imageView_duration="300"
+        android:src="@drawable/ic_close"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.02"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageViewForFilter"
+        app:layout_constraintVertical_bias="0.02" />
+
+            <ImageView
+                android:id="@+id/imgShare"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:background="@color/semi_black_transparent"
+                android:padding="8dp"
+                android:visibility="gone"
+                android:src="@drawable/ic_share"
+                app:layout_constraintBottom_toBottomOf="@+id/imageViewForFilter"
+                app:layout_constraintStart_toEndOf="@+id/imgCamera" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvFilterView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:background="#5B000000"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:listitem="@layout/row_filter_view" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </layout>
